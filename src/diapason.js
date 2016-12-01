@@ -237,7 +237,7 @@ function inject(obj, contextualDependencies, executionContext, selectedContainer
 		});
 	} else if (typeof obj === "function") {
 		LOG.log("injecting function:", obj);
-		return $promise.resovle(obj.call(executionContext));
+		return $promise.resolve(obj.call(executionContext));
 	} else {
 		LOG.log("injecting obj:", obj);
 		return $promise.resolve(obj);
